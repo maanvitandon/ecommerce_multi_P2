@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>E-Commerce Website-Locations</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<nav class= "nav nav-top">
+				<div class =" nav-logo">
+					<img src="images/logo.png">
+				</div>
+				<div class ="nav-content">
+				  <a href="index.html" target="_blank">Home</a>
+				  <a href="about.html" target="_blank">About</a>
+				  <a href="services.html" target="_blank">Services</a>
+				  <a href="#">Locations</a>
+				  <a href="#">Login/Register <i class="fas fa-user"></i></a>
+				</div>
+		</nav>
+
+		<div class= "main">
+			<div class="main-content">
+				<h2>Buy-Best Locations</h2>
+				<p> We at Buy-Best provide you the best services.<br> Our main office is located in Mumbai. We also have our sub-offices in Delhi, Bangalore, Kolkata, Hyderabad and Pune. Reach out to us anytime! We serve all across the country.</p>
+				<p>Find the contact of our offices below and we offer 24/7 support</p>
+				<button><a href="#">KNOW MORE</a></button>
+			    </div>
+		</div>
+		
+		<h1 id="offices_heading">OUR OFFICES</h1>
+		<div class= "locations">
+			<div class="mumbai">
+				<h2>Mumbai- Head Office</h2>
+				<p>Address: 56/2, Andheri West <br> Phone: +918888844440 <br> E-mail: buybest_mumbai@gmail.com</p>
+			</div>
+			<div class="delhi">
+				<h2>Delhi</h2>
+				<p>Address: 23 A, Chanakyapuri <br> Phone: +918888844441 <br> E-mail: buybest_delhi@gmail.com</p>
+			</div>
+			<div class="bangalore">
+				<h2>Bangalore</h2>
+				<p>Address: 23, 14th Cross, 10th Main, Jayanagar Block-4 <br> Phone: +918888844442 <br> E-mail: buybest_bangalore@gmail.com</p>
+			</div>
+			<div class="kolkata">
+				<h2>Kolkata</h2>
+				<p>Address: 8B, 56/2, Bangur Avenue <br> Phone: +918888844443 <br> E-mail: buybest_kolkata@gmail.com</p>
+			</div>
+			<div class="hyderabad">
+				<h2>Hyderabad</h2>
+				<p>Address: 19, Masjid Road <br> Phone: +918888844444 <br> E-mail: buybest_hyderabad@gmail.com</p>
+			</div>
+			<div class="pune">
+				<h2>Pune</h2>
+				<p>Address: 18, Bazar Chowk <br> Phone: +918888844445 <br> E-mail: buybest_pune@gmail.com</p>
+			</div>
+		</div>
+		<div class= "form-container">
+				<h2>Feedback Form</h2>
+				<h4>Your Suggestions Are Important To Us</h4>
+				<div class="form-content">
+					<form name="submit-googlesheet" method="post">
+						<input type="text" name="name" placeholder="Enter Your Name"> <br>
+						<input type="email" name="email" placeholder="Enter Your E-Mail"><br>
+						<input type="number" name="phone" placeholder="Enter Phone Number"><br>
+						<textarea name="suggestions" placeholder="Your Suggestions Please"></textarea><br>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+		</div>
+		<hr>
+		<footer>
+			<div class="logo">
+				<img src="images/logo.png" width="200">
+			</div>
+			<div class= "pages">
+				<h3>Important Pages</h3>
+				<a href="#">About |</a>
+				<a href="#">Services |</a>
+				<a href="#">Contact |</a>
+			</div>
+			<div class="docs">
+				<h3>Documents</h3>
+				<a href="#">Policies</a> <br>
+				<a href="#">Terms & Conditions</a><br>
+				<a href="#">Location Details</a><br>
+			</div>
+			<div class="social">
+				<h3>Social Media Handles</h3>
+				<a href="#"><i class="fab fa-facebook-square"></i></a>
+				<a href="#"><i class="fab fa-instagram-square"></i></a>
+				<a href="#"><i class="fab fa-linkedin"></i></a>
+			</div>
+			<div class="contact">
+				<h3>Contact Us</h3>
+				<a href="#"><i class="fab fa-whatsapp-square"></i></a>
+				<a href="#"><i class="fas fa-envelope"></i></a>
+			</div>
+			<hr>
+			<div class="copyrights">
+				<p>&copy Copyrights Reserved 2021 <br> Buy-Best</p>
+			</div>
+		</footer>
+		<script type="text/javascript">
+    	const scriptURL = 'https://script.google.com/macros/s/AKfycbxwd7xP1ixXmxoDUwMCeKRCaqZ6HLefkL5sbFnY1lBNx9HhLOwtu-gAJZZddOYeLTV8NA/exec'
+            const form = document.forms['submit-googlesheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for your suggestions! It means a lot to us."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          
+    </script>
+	</body>
+</html>
